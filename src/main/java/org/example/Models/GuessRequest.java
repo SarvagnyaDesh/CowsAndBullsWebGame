@@ -1,5 +1,8 @@
 package org.example.Models;
 
+import lombok.Data;
+
+@Data
 public class GuessRequest {
     private int roomId;
     private int player;

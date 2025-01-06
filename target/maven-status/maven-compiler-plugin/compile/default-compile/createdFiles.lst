@@ -1,1 +1,9 @@
+org\example\Models\GuessesAndResults.class
+org\example\Models\Room.class
+org\example\Controllers\RoomController.class
+org\example\DAO\PlayerDAO.class
 org\example\Main.class
+org\example\DAO\RoomDAO.class
+org\example\Models\GuessRequest.class
+org\example\Models\Player.class
+org\example\Services\RoomService.class
