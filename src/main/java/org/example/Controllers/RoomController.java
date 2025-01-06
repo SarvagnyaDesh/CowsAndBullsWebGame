@@ -25,6 +25,11 @@ public class RoomController {
         return roomService.createPlayer(name);
     }
 
+    @GetMapping("getname/{roomID}/{player}")
+    public String getName(@PathVariable int roomID, @PathVariable int player){
+        return roomService.getName(roomID, player);
+    }
+
     @GetMapping("/create/{playerId}")
     public ResponseEntity<Room> createRoom(@PathVariable int playerId){
         return roomService.createRoom(playerId);
@@ -65,8 +70,8 @@ public class RoomController {
     }
 
     @GetMapping("getsc/{roomId}/{player}")
-    public String getSc(@PathVariable int roomID, @PathVariable int player){
-        return roomService.getSc(roomID, player);
+    public String getSc(@PathVariable int roomId, @PathVariable int player){
+        return roomService.getSc(roomId, player);
     }
 
 }

@@ -155,4 +155,12 @@ public class RoomService {
         if(player == 1) return room.getPlayer1SC();
         else return room.getPlayer2SC();
     }
+
+    public String getName(int roomId, int player) {
+        Optional<Room> roomObj = roomDAO.findById(roomId);
+        if (roomObj.isEmpty()) return "Room not found!!";
+        Room room = roomObj.get();
+        if(player == 1) return playerDAO.findById(room.getPlayer2Id()).get().getName();
+        else return playerDAO.findById(room.getPlayer1Id()).get().getName();
+    }
 }
