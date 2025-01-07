@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "https://cowsandbulls-frontend.onrender.com"})
 public class RoomController {
 
     @Autowired
